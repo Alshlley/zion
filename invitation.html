@@ -1,0 +1,1344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alzion Dale | 1st Birthday & Christening</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   1. GENERAL SETTINGS
+========================================= */
+
+:root {
+    --navy: #285875;
+    --blue: #4d8db5;
+    --light-blue: #a9dcf8;
+    --pale-blue: #eaf8ff;
+    --white: #ffffff;
+    --border: #b6dcf0;
+    --text: #345c76;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    background: var(--pale-blue);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+section {
+    padding: 90px 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-wrap {
+    width: min(900px, 100%);
+    margin: auto;
+    position: relative;
+    z-index: 3;
+}
+
+.section-kicker {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font: 11px Arial, sans-serif;
+    color: #6795b0;
+}
+
+h2 {
+    text-align: center;
+    font: 400 clamp(35px, 7vw, 55px) 'DM Serif Display', Georgia, serif;
+    color: var(--navy);
+    margin: 8px 0 30px;
+}
+
+.line {
+    width: 90px;
+    height: 2px;
+    background: #86b8d5;
+    margin: 22px auto;
+}
+
+.page-bg {
+    background:
+        radial-gradient(ellipse at 0% 20%, #ffffff 0%, transparent 28%),
+        radial-gradient(ellipse at 100% 75%, #ffffff 0%, transparent 25%),
+        linear-gradient(145deg, #f0faff, #dff3ff, #f4fbff);
+}
+
+
+/* =========================================
+   2. NAVIGATION
+========================================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 8px;
+    background: rgba(242,250,255,.95);
+    border-bottom: 1px solid #d0e8f5;
+    backdrop-filter: blur(12px);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navy);
+    font: 700 10px Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    padding: 9px 13px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+nav a:hover {
+    background: #c9e9fb;
+    color: #234b69;
+}
+
+
+/* =========================================
+   3. CLOUD DECORATIONS
+========================================= */
+
+.cloud {
+    position: absolute;
+    width: 130px;
+    height: 45px;
+    background: rgba(255,255,255,.88);
+    border-radius: 50px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cloud:before,
+.cloud:after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud:before {
+    width: 65px;
+    height: 65px;
+    top: -27px;
+    left: 20px;
+}
+
+.cloud:after {
+    width: 75px;
+    height: 75px;
+    top: -38px;
+    right: 12px;
+}
+
+.cloud-one {
+    top: 17%;
+    left: -55px;
+}
+
+.cloud-two {
+    bottom: 15%;
+    right: -55px;
+}
+
+.cloud-three {
+    top: 25%;
+    right: -70px;
+    transform: scale(.7);
+}
+
+
+/* =========================================
+   4. BALLOON AND STAR ILLUSTRATIONS
+========================================= */
+
+.balloon-decoration {
+    position: absolute;
+    width: 340px;
+    height: auto;
+    z-index: 1;
+    opacity: .90;
+    pointer-events: none;
+}
+
+.balloon-top-right {
+    top: 15px;
+    right: -95px;
+}
+
+.balloon-bottom-left {
+    bottom: 0;
+    left: -110px;
+    transform: rotate(-10deg);
+}
+
+.balloon-center-left {
+    top: 30px;
+    left: -120px;
+    transform: rotate(-12deg);
+}
+
+.star-decoration {
+    position: absolute;
+    z-index: 1;
+    color: #376f94;
+    pointer-events: none;
+}
+
+.star-one {
+    top: 12%;
+    left: 12%;
+    font-size: 25px;
+}
+
+.star-two {
+    top: 20%;
+    right: 15%;
+    font-size: 35px;
+}
+
+.star-three {
+    bottom: 12%;
+    right: 10%;
+    font-size: 20px;
+}
+
+
+/* =========================================
+   5. WATERCOLOR TEDDY BEAR
+========================================= */
+
+.bear-decoration {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bear-left {
+    left: 10px;
+    bottom: 15px;
+}
+
+.bear-right {
+    right: 5px;
+    top: 20px;
+    transform: rotate(8deg);
+}
+
+.bear-small {
+    width: 105px;
+}
+
+@media (max-width: 600px) {
+
+    .bear-decoration {
+        width: 90px;
+    }
+
+    .bear-small {
+        width: 70px;
+    }
+
+    .bear-left {
+        left: -8px;
+    }
+
+    .bear-right {
+        right: -8px;
+    }
+
+    .balloon-decoration {
+        width: 210px;
+        opacity: .55;
+    }
+
+    .balloon-top-right {
+        right: -90px;
+    }
+
+    .balloon-bottom-left {
+        left: -100px;
+    }
+
+    .balloon-center-left {
+        left: -100px;
+    }
+}
+
+
+/* =========================================
+   6. HOME / HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 94vh;
+    min-height: 94svh;
+    padding: 75px 20px 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-inner {
+    width: min(760px, 100%);
+    position: relative;
+    z-index: 3;
+}
+
+.eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #547c96;
+}
+
+.hero h1 {
+    font: 400 clamp(55px, 12vw, 105px)/1.1 'DM Serif Display', Georgia, serif;
+    color: var(--navy);
+    margin-top: 10px;
+}
+
+.script {
+    font: 400 clamp(35px, 7vw, 58px) 'Great Vibes', cursive;
+    color: #4c91bd;
+}
+
+.hero-name {
+    font: 400 40px 'DM Serif Display', Georgia, serif;
+    color: var(--navy);
+    margin: 10px 0;
+}
+
+.hero-copy {
+    max-width: 510px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #496a80;
+}
+
+
+/* =========================================
+   7. CIRCULAR BABY PHOTO
+========================================= */
+
+.photo-frame {
+    width: 220px;
+    height: 220px;
+    margin: 30px auto 22px;
+    border-radius: 50%;
+    padding: 7px;
+    background: white;
+    border: 2px solid #a8d5ef;
+    box-shadow: 0 12px 30px rgba(58,111,145,.13);
+    overflow: hidden;
+}
+
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 40%;
+    transform: scale(1.2);
+}
+
+.scroll-hint {
+    margin-top: 30px;
+    font: 10px Arial, sans-serif;
+    letter-spacing: 3px;
+    color: #739bb2;
+}
+
+
+/* =========================================
+   8. EVENT DETAILS
+========================================= */
+
+.details-card {
+    background: rgba(255,255,255,.82);
+    border: 1px solid #c3e4f5;
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(60,119,153,.08);
+    position: relative;
+    z-index: 3;
+}
+
+.date-big {
+    font: 400 75px 'DM Serif Display', Georgia, serif;
+    color: #4e8eb5;
+    line-height: 1.1;
+}
+
+.date-month {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.detail-item {
+    padding: 20px 12px;
+    border-top: 1px solid #b9dced;
+}
+
+.detail-symbol {
+    font-size: 28px;
+    color: #6da9ca;
+}
+
+.detail-item h3 {
+    font: 700 12px Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5386a4;
+    margin: 8px 0;
+}
+
+.detail-item p {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   9. GALLERY
+========================================= */
+
+.gallery-section {
+    background: rgba(195,229,248,.35);
+}
+
+.gallery-intro {
+    text-align: center;
+    font-size: 13px;
+    max-width: 580px;
+    margin: -12px auto 35px;
+    color: #54768d;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    position: relative;
+    z-index: 3;
+}
+
+.gallery-item {
+    height: 270px;
+    overflow: hidden;
+    border-radius: 19px;
+    background: white;
+    padding: 7px;
+    border: 1px solid #b9dced;
+    box-shadow: 0 8px 20px rgba(64,122,153,.10);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+    display: block;
+    transition: .4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-note {
+    text-align: center;
+    font: 23px 'Great Vibes', cursive;
+    color: #578caf;
+    margin-top: 28px;
+}
+
+
+/* =========================================
+   10. PHOTO LIGHTBOX
+========================================= */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    background: rgba(20,49,68,.93);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85vh;
+    position: relative;
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+    border: 6px solid white;
+    border-radius: 15px;
+}
+
+.lightbox-close {
+    position: absolute;
+    right: -15px;
+    top: -20px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #315b76;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   11. GIFT GUIDE
+========================================= */
+
+.gift-section {
+    position: relative;
+}
+
+.gift-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    font-size: 13px;
+}
+
+.gift-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.gift {
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.82);
+    border: 1px dashed #9ccde7;
+}
+
+.gift-heart {
+    color: #6ba9d0;
+    font-size: 26px;
+}
+
+.gift h3 {
+    font: 700 13px Arial, sans-serif;
+    letter-spacing: 1px;
+    color: #285b83;
+    margin: 8px 0;
+}
+
+.gift p {
+    font-size: 12px;
+}
+
+.note-box {
+    max-width: 680px;
+    margin: 28px auto 0;
+    padding: 25px;
+    border: 1px dashed #83b8d8;
+    border-radius: 20px;
+    background: rgba(255,255,255,.75);
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   12. GUEST NOTE
+========================================= */
+
+.guest-section {
+    background: rgba(190,226,247,.40);
+}
+
+.guest-text {
+    max-width: 650px;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+}
+
+.thankyou {
+    margin-top: 35px;
+    text-align: center;
+    font: 400 55px 'Great Vibes', cursive;
+    color: #5798bd;
+}
+
+
+/* =========================================
+   13. FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 35px 15px;
+    font: 10px Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6d96ad;
+    position: relative;
+}
+
+.back-top {
+    display: inline-block;
+    margin-top: 13px;
+    text-decoration: none;
+    color: var(--navy);
+    border: 1px solid #9bc9e1;
+    border-radius: 30px;
+    padding: 8px 18px;
+}
+
+
+/* =========================================
+   14. MOBILE RESPONSIVENESS
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    nav {
+        gap: 0;
+        padding: 9px 2px;
+    }
+
+    nav a {
+        font-size: 8px;
+        letter-spacing: .6px;
+        padding: 9px 7px;
+    }
+
+    .hero {
+        min-height: 90svh;
+        padding: 55px 17px;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 12vw, 68px);
+    }
+
+    .script {
+        font-size: 39px;
+    }
+
+    .hero-name {
+        font-size: 34px;
+    }
+
+    .photo-frame {
+        width: 190px;
+        height: 190px;
+    }
+
+    section {
+        padding: 65px 16px;
+    }
+
+    .details-card {
+        padding: 25px 17px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 11px;
+    }
+
+    .gallery-item {
+        height: 220px;
+    }
+
+    .gift-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gift {
+        padding: 20px 9px;
+    }
+
+    .gift h3 {
+        font-size: 11px;
+    }
+
+    .gift p {
+        font-size: 11px;
+    }
+
+    .guest-text {
+        font-size: 12px;
+    }
+
+    .thankyou {
+        font-size: 43px;
+    }
+
+    .date-big {
+        font-size: 65px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+
+    nav a {
+        font-size: 7px;
+        padding: 8px 5px;
+    }
+
+    .gallery-item {
+        height: 175px;
+    }
+
+    .photo-frame {
+        width: 170px;
+        height: 170px;
+    }
+
+    .gift-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="page-bg" id="top">
+
+
+<!-- =========================================
+     REUSABLE BALLOON DECORATION
+========================================= -->
+
+<!-- This SVG is used as a decoration in different sections. -->
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden"
+     xmlns="http://www.w3.org/2000/svg">
+
+<symbol id="blue-balloons" viewBox="0 0 500 520">
+
+    <g fill="#315f80">
+
+        <path d="M250 15 L258 40 L285 40 L263 55 L270 82 L250 65 L230 82 L237 55 L215 40 L242 40Z"/>
+
+        <path d="M90 115 L96 132 L114 132 L100 143 L105 161 L90 150 L75 161 L80 143 L66 132 L84 132Z"/>
+
+        <path d="M420 100 L427 120 L448 120 L431 133 L437 153 L420 141 L403 153 L409 133 L392 120 L413 120Z"/>
+
+        <path d="M370 300 L376 316 L394 316 L380 327 L385 345 L370 334 L355 345 L360 327 L346 316 L364 316Z"/>
+
+        <path d="M135 355 L140 368 L155 368 L143 378 L147 393 L135 384 L123 393 L127 378 L115 368 L130 368Z"/>
+
+    </g>
+
+    <g fill="none" stroke="#315f80"
+       stroke-width="4" stroke-linecap="round">
+
+        <path d="M100 50 C55 50 48 90 58 125 C65 155 85 174 100 180 L96 192 L108 195 L115 181 C150 168 160 135 158 100 C156 70 135 50 100 50Z"/>
+
+        <path d="M108 195 C120 240 110 275 135 310"/>
+
+        <path d="M250 100 C205 100 190 135 195 175 C200 220 222 244 250 253 L245 267 L260 270 L267 254 C300 240 315 207 310 166 C305 125 282 100 250 100Z"
+              fill="#a9dcf8"/>
+
+        <path d="M260 270 C290 305 275 340 260 380"/>
+
+        <path d="M405 55 C370 55 360 85 367 115 C373 145 390 157 405 163 L400 175 L414 178 L420 164 C450 150 463 120 458 90 C455 65 432 55 405 55Z"
+              fill="#a9dcf8"/>
+
+        <path d="M414 178 C440 215 430 250 405 285"/>
+
+        <path d="M160 285 C120 285 105 320 112 360 C120 400 140 420 165 428 L160 440 L176 443 L183 429 C215 413 225 380 218 345 C212 310 190 285 160 285Z"
+              fill="#a9dcf8"/>
+
+        <path d="M176 443 C190 470 205 480 220 495"/>
+
+        <path d="M345 330 C310 330 295 360 300 395 C305 430 325 450 345 457 L340 470 L355 473 L362 458 C392 440 400 410 395 375 C390 345 370 330 345 330Z"
+              fill="#a9dcf8"/>
+
+        <path d="M355 473 C370 490 365 505 350 515"/>
+
+    </g>
+
+    <g fill="#47799b">
+        <circle cx="45" cy="225" r="3"/>
+        <circle cx="180" cy="65" r="3"/>
+        <circle cx="330" cy="60" r="3"/>
+        <circle cx="465" cy="210" r="3"/>
+        <circle cx="280" cy="285" r="3"/>
+        <circle cx="70" cy="390" r="3"/>
+        <circle cx="450" cy="390" r="3"/>
+        <circle cx="230" cy="220" r="4"/>
+        <circle cx="300" cy="260" r="3"/>
+        <circle cx="80" cy="275" r="3"/>
+        <circle cx="430" cy="330" r="3"/>
+    </g>
+
+</symbol>
+</svg>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav>
+
+    <a href="#home">Home</a>
+    <a href="#details">The Details</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#gifts">Gift Guide</a>
+    <a href="#guests">Guest Note</a>
+
+</nav>
+
+
+<!-- =========================================
+     HOME
+========================================= -->
+
+<header class="hero" id="home">
+
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+
+    <svg class="balloon-decoration balloon-top-right"
+         viewBox="0 0 500 520">
+        <use href="#blue-balloons"/>
+    </svg>
+
+    <img src="bear.png"
+         class="bear-decoration bear-left"
+         alt="Watercolor teddy bear">
+
+    <span class="star-decoration star-one">✦</span>
+    <span class="star-decoration star-two">✧</span>
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            Join us for a
+        </div>
+
+        <h1>1st Birthday</h1>
+
+        <div class="script">
+            and Christening
+        </div>
+
+        <div class="line"></div>
+
+        <div class="eyebrow">
+            Honoring of
+        </div>
+
+        <div class="hero-name">
+            Alzion Dale
+        </div>
+
+        <div class="photo-frame">
+
+            <img src="zion.jpg" alt="Alzion Dale">
+
+        </div>
+
+        <p class="hero-copy">
+
+            A little celebration filled with love,
+            laughter, and blessings. We would be
+            delighted to share this special day with you.
+
+        </p>
+
+        <div class="scroll-hint">
+            SCROLL TO EXPLORE ↓
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     EVENT DETAILS
+========================================= -->
+
+<section id="details">
+
+    <div class="cloud cloud-three"></div>
+
+    <svg class="balloon-decoration balloon-center-left"
+         viewBox="0 0 500 520">
+        <use href="#blue-balloons"/>
+    </svg>
+
+    <img src="bear.png"
+         class="bear-decoration bear-right bear-small"
+         alt="Teddy bear">
+
+    <div class="section-wrap">
+
+        <div class="section-kicker">
+            A day to celebrate
+        </div>
+
+        <h2>You're Invited</h2>
+
+        <div class="details-card">
+
+            <div class="date-month">Sunday</div>
+
+            <div class="date-big">06</div>
+
+            <div class="date-month">December 2026</div>
+
+            <div class="line"></div>
+
+            <p style="font-size:13px">
+
+                Please join us as we celebrate
+                Alzion Dale's 1st birthday and christening.
+
+            </p>
+
+            <div class="detail-grid">
+
+                <div class="detail-item">
+
+                    <div class="detail-symbol">♡</div>
+
+                    <h3>Christening Ceremony</h3>
+
+                    <p>
+                        <strong>Our Lady of Lourdes</strong>
+                        <br>
+                        Before 10:30 AM
+                    </p>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <div class="detail-symbol">⌂</div>
+
+                    <h3>Reception Venue</h3>
+
+                    <p>
+                        <strong>Brgy. 174, Torres Family Compound</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ZION'S GALLERY
+========================================= -->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+
+    <svg class="balloon-decoration balloon-bottom-left"
+         viewBox="0 0 500 520">
+        <use href="#blue-balloons"/>
+    </svg>
+
+    <img src="bear.png"
+         class="bear-decoration bear-right"
+         alt="Watercolor teddy bear">
+
+    <div class="section-wrap">
+
+        <div class="section-kicker">
+            Little moments, big memories
+        </div>
+
+        <h2>Meet Zion</h2>
+
+        <p class="gallery-intro">
+
+            A little collection of our favorite moments
+            with our birthday boy. Every smile, every
+            laugh, and every little milestone is a memory
+            worth keeping.
+
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item" onclick="openPhoto(this)">
+                <img src="zion1.jpg" alt="Zion photo 1">
+            </div>
+
+            <div class="gallery-item" onclick="openPhoto(this)">
+                <img src="zion2.jpg" alt="Zion photo 2">
+            </div>
+
+            <div class="gallery-item" onclick="openPhoto(this)">
+                <img src="zion3.jpg" alt="Zion photo 3">
+            </div>
+
+            <div class="gallery-item" onclick="openPhoto(this)">
+                <img src="zion4.jpg" alt="Zion photo 4">
+            </div>
+
+            <div class="gallery-item" onclick="openPhoto(this)">
+                <img src="zion5.jpg" alt="Zion photo 5">
+            </div>
+
+            <div class="gallery-item" onclick="openPhoto(this)">
+                <img src="zion6.jpg" alt="Zion photo 6">
+            </div>
+
+        </div>
+
+        <p class="gallery-note">
+            Our little sunshine, Alzion Dale ♡
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PHOTO VIEWER
+========================================= -->
+
+<div class="lightbox" id="lightbox"
+     onclick="closePhoto(event)">
+
+    <div class="lightbox-content">
+
+        <button class="lightbox-close"
+                onclick="closePhoto(event)">
+            ×
+        </button>
+
+        <img id="lightbox-image"
+             src=""
+             alt="Zion enlarged photo">
+
+        <p style="color:white;margin-top:10px;font-size:13px">
+            Alzion Dale ♡
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     GIFT GUIDE
+========================================= -->
+
+<section class="gift-section" id="gifts">
+
+    <div class="cloud cloud-three"></div>
+
+    <svg class="balloon-decoration balloon-top-right"
+         viewBox="0 0 500 520">
+        <use href="#blue-balloons"/>
+    </svg>
+
+    <img src="bear.png"
+         class="bear-decoration bear-left"
+         alt="Watercolor teddy bear">
+
+    <div class="section-wrap">
+
+        <div class="section-kicker">
+            Your presence is our present
+        </div>
+
+        <h2>Gift Guide</h2>
+
+        <p class="gift-intro">
+
+            Your presence is already the greatest gift!
+            But if you wish to bless our little one,
+            here are some things we would truly appreciate.
+
+        </p>
+
+        <div class="gift-list">
+
+            <div class="gift">
+
+                <div class="gift-heart">♡</div>
+
+                <h3>MONETARY GIFT</h3>
+
+                <p>
+                    Any amount given with love
+                    and blessings is greatly appreciated.
+                </p>
+
+            </div>
+
+            <div class="gift">
+
+                <div class="gift-heart">♡</div>
+
+                <h3>BEAR BRAND JUNIOR</h3>
+
+                <p>1–3 years old</p>
+
+            </div>
+
+            <div class="gift">
+
+                <div class="gift-heart">♡</div>
+
+                <h3>EQ DIAPERS</h3>
+
+                <p>Medium – Large</p>
+
+            </div>
+
+            <div class="gift">
+
+                <div class="gift-heart">♡</div>
+
+                <h3>BABY CLOTHES</h3>
+
+                <p>Size: 6–12 months</p>
+
+            </div>
+
+        </div>
+
+        <div class="note-box">
+
+            Please know that you are not obligated
+            to give anything.
+
+            <br><br>
+
+            Your presence, prayers, and blessings
+            are all that we cherish. ♡
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     GUEST NOTE
+========================================= -->
+
+<section class="guest-section" id="guests">
+
+    <div class="cloud cloud-one"></div>
+
+    <svg class="balloon-decoration balloon-bottom-left"
+         viewBox="0 0 500 520">
+        <use href="#blue-balloons"/>
+    </svg>
+
+    <img src="bear.png"
+         class="bear-decoration bear-right bear-small"
+         alt="Watercolor teddy bear">
+
+    <div class="section-wrap">
+
+        <div class="section-kicker">
+            A little note for our guests
+        </div>
+
+        <h2>Can I Bring a Guest?</h2>
+
+        <p class="guest-text">
+
+            We truly wish we could welcome everyone
+            you'd like to share this day with, but due
+            to limited venue capacity, we are only able
+            to accommodate those specifically named
+            in the invitation.
+
+        </p>
+
+        <div class="line"></div>
+
+        <p class="guest-text">
+
+            We ask for your kindness, forgiveness,
+            and understanding regarding this matter.
+
+        </p>
+
+        <div class="thankyou">
+            Thank you so much!
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    Made with love for Alzion Dale
+
+    <br>
+
+    ♡ December 06, 2026 ♡
+
+    <br>
+
+    <a href="#top" class="back-top">
+        Back to top ↑
+    </a>
+
+</footer>
+
+</div>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+function openPhoto(element) {
+
+    const image = element.querySelector("img");
+
+    const lightbox = document.getElementById("lightbox");
+
+    const lightboxImage = document.getElementById("lightbox-image");
+
+    lightboxImage.src = image.src;
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closePhoto(event) {
+
+    if (
+        event.target.id === "lightbox" ||
+        event.target.classList.contains("lightbox-close")
+    ) {
+
+        document.getElementById("lightbox").classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+}
+
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        document.getElementById("lightbox").classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

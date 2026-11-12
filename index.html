@@ -261,42 +261,6 @@ nav a:hover {
     width: 105px;
 }
 
-@media (max-width: 600px) {
-
-    .bear-decoration {
-        width: 90px;
-    }
-
-    .bear-small {
-        width: 70px;
-    }
-
-    .bear-left {
-        left: -8px;
-    }
-
-    .bear-right {
-        right: -8px;
-    }
-
-    .balloon-decoration {
-        width: 210px;
-        opacity: .55;
-    }
-
-    .balloon-top-right {
-        right: -90px;
-    }
-
-    .balloon-bottom-left {
-        left: -100px;
-    }
-
-    .balloon-center-left {
-        left: -100px;
-    }
-}
-
 
 /* =========================================
    6. HOME / HERO SECTION
@@ -553,7 +517,113 @@ nav a:hover {
 
 
 /* =========================================
-   11. GIFT GUIDE
+   11. NINONGS & NINANGS SECTION
+========================================= */
+
+.godparent-section {
+    background:
+        radial-gradient(ellipse at 0% 10%, #ffffff 0%, transparent 30%),
+        linear-gradient(145deg, #f4fbff, #e2f3fc, #f5fbff);
+}
+
+.godparent-intro {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 2;
+    color: #466b85;
+}
+
+.godparent-title {
+    font: 400 clamp(35px, 7vw, 60px) 'DM Serif Display', Georgia, serif;
+    color: var(--navy);
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 10px 0 5px;
+}
+
+.godparent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 55px;
+    position: relative;
+    z-index: 3;
+}
+
+.godparent-card {
+    position: relative;
+    background: rgba(255,255,255,.82);
+    border: 1.5px solid #a8cfe5;
+    border-radius: 25px;
+    padding: 25px 20px 20px;
+    box-shadow: 0 10px 25px rgba(60,119,153,.06);
+}
+
+.godparent-card-title {
+    text-align: center;
+    background: #d9effc;
+    border: 1px solid #a8cfe5;
+    color: var(--navy);
+    font: 400 21px 'DM Serif Display', Georgia, serif;
+    letter-spacing: 4px;
+    padding: 8px 5px;
+    margin: -45px 12px 20px;
+    position: relative;
+}
+
+.godparent-list {
+    list-style: none;
+}
+
+.godparent-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dotted #b4d5e7;
+    color: #345675;
+    font-size: 13px;
+}
+
+.godparent-list li:last-child {
+    border-bottom: none;
+}
+
+.godparent-heart {
+    color: #75aaca;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.godparent-love {
+    margin-top: 45px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.godparent-love p {
+    font: italic 19px 'Libre Baskerville', Georgia, serif;
+    color: #466b85;
+}
+
+.godparent-love h3 {
+    font: 400 28px 'DM Serif Display', Georgia, serif;
+    letter-spacing: 4px;
+    color: var(--navy);
+    margin-top: 5px;
+}
+
+.godparent-love .divider {
+    margin: 15px auto;
+}
+
+
+/* =========================================
+   12. GIFT GUIDE
 ========================================= */
 
 .gift-section {
@@ -613,7 +683,7 @@ nav a:hover {
 
 
 /* =========================================
-   12. GUEST NOTE
+   13. GUEST NOTE
 ========================================= */
 
 .guest-section {
@@ -636,7 +706,7 @@ nav a:hover {
 
 
 /* =========================================
-   13. FOOTER
+   14. FOOTER
 ========================================= */
 
 footer {
@@ -661,7 +731,7 @@ footer {
 
 
 /* =========================================
-   14. MOBILE RESPONSIVENESS
+   15. MOBILE RESPONSIVENESS
 ========================================= */
 
 @media screen and (max-width: 700px) {
@@ -721,6 +791,37 @@ footer {
         height: 220px;
     }
 
+    .godparent-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        max-width: 420px;
+        margin: 55px auto 0;
+    }
+
+    .godparent-card {
+        padding: 25px 17px 20px;
+    }
+
+    .godparent-card-title {
+        font-size: 19px;
+    }
+
+    .godparent-list li {
+        font-size: 12px;
+    }
+
+    .godparent-title {
+        letter-spacing: 1px;
+    }
+
+    .godparent-intro {
+        font-size: 12px;
+    }
+
+    .godparent-love h3 {
+        font-size: 24px;
+    }
+
     .gift-list {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -748,6 +849,39 @@ footer {
 
     .date-big {
         font-size: 65px;
+    }
+
+    .bear-decoration {
+        width: 90px;
+    }
+
+    .bear-small {
+        width: 70px;
+    }
+
+    .bear-left {
+        left: -8px;
+    }
+
+    .bear-right {
+        right: -8px;
+    }
+
+    .balloon-decoration {
+        width: 210px;
+        opacity: .55;
+    }
+
+    .balloon-top-right {
+        right: -90px;
+    }
+
+    .balloon-bottom-left {
+        left: -100px;
+    }
+
+    .balloon-center-left {
+        left: -100px;
     }
 
 }
@@ -786,8 +920,6 @@ footer {
 <!-- =========================================
      REUSABLE BALLOON DECORATION
 ========================================= -->
-
-<!-- This SVG is used as a decoration in different sections. -->
 
 <svg style="position:absolute;width:0;height:0;overflow:hidden"
      xmlns="http://www.w3.org/2000/svg">
@@ -864,6 +996,7 @@ footer {
     <a href="#home">Home</a>
     <a href="#details">The Details</a>
     <a href="#gallery">Gallery</a>
+    <a href="#ninongs">Ninongs & Ninangs</a>
     <a href="#gifts">Gift Guide</a>
     <a href="#guests">Guest Note</a>
 
@@ -914,17 +1047,13 @@ footer {
         </div>
 
         <div class="photo-frame">
-
             <img src="zion.jpg" alt="Alzion Dale">
-
         </div>
 
         <p class="hero-copy">
-
             A little celebration filled with love,
             laughter, and blessings. We would be
             delighted to share this special day with you.
-
         </p>
 
         <div class="scroll-hint">
@@ -972,10 +1101,8 @@ footer {
             <div class="line"></div>
 
             <p style="font-size:13px">
-
                 Please join us as we celebrate
                 Alzion Dale's 1st birthday and christening.
-
             </p>
 
             <div class="detail-grid">
@@ -1042,12 +1169,10 @@ footer {
         <h2>Meet Zion</h2>
 
         <p class="gallery-intro">
-
             A little collection of our favorite moments
             with our birthday boy. Every smile, every
             laugh, and every little milestone is a memory
             worth keeping.
-
         </p>
 
         <div class="gallery-grid">
@@ -1115,6 +1240,160 @@ footer {
 
 
 <!-- =========================================
+     NINONGS & NINANGS
+========================================= -->
+
+<section class="godparent-section" id="ninongs">
+
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+
+    <svg class="balloon-decoration balloon-top-right"
+         viewBox="0 0 500 520">
+        <use href="#blue-balloons"/>
+    </svg>
+
+    <svg class="balloon-decoration balloon-bottom-left"
+         viewBox="0 0 500 520">
+        <use href="#blue-balloons"/>
+    </svg>
+
+    <img src="bear.png"
+         class="bear-decoration bear-right"
+         alt="Watercolor teddy bear">
+
+    <div class="section-wrap">
+
+        <div class="section-kicker">
+            A special part of his journey
+        </div>
+
+        <h2 class="godparent-title">
+            Ninongs & Ninangs
+        </h2>
+
+        <div class="divider">♡</div>
+
+        <p class="godparent-intro">
+            Your presence in Alzion Dale's life will always
+            be a blessing. We would be honored to have you
+            as one of his Ninongs and Ninangs, guiding him
+            with love, wisdom, and faith.
+        </p>
+
+
+        <div class="godparent-grid">
+
+
+            <!-- NINONGS -->
+
+            <div class="godparent-card">
+
+                <div class="godparent-card-title">
+                    NINONGS
+                </div>
+
+                <ul class="godparent-list">
+
+                    <li><span class="godparent-heart">♡</span> Christ Jhaztlee</li>
+
+                    <li><span class="godparent-heart">♡</span> Angelo Migz</li>
+
+                    <li><span class="godparent-heart">♡</span> Noel</li>
+
+                    <li><span class="godparent-heart">♡</span> Cuda</li>
+
+                    <li><span class="godparent-heart">♡</span> Jhonmicheal</li>
+
+                    <li><span class="godparent-heart">♡</span> Jake</li>
+
+                    <li><span class="godparent-heart">♡</span> Louis Stev</li>
+
+                    <li><span class="godparent-heart">♡</span> Bilog</li>
+
+                    <li><span class="godparent-heart">♡</span> Tonton</li>
+
+                    <li><span class="godparent-heart">♡</span> Niel</li>
+
+                    <li><span class="godparent-heart">♡</span> Onyok</li>
+
+                    <li><span class="godparent-heart">♡</span> Velarde</li>
+
+                    <li><span class="godparent-heart">♡</span> Diego</li>
+
+                    <li><span class="godparent-heart">♡</span> Padi</li>
+
+                    <li><span class="godparent-heart">♡</span> Dr. Red</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- NINANGS -->
+
+            <div class="godparent-card">
+
+                <div class="godparent-card-title">
+                    NINANGS
+                </div>
+
+                <ul class="godparent-list">
+
+                    <li><span class="godparent-heart">♡</span> Alshlley Jellaika</li>
+
+                    <li><span class="godparent-heart">♡</span> Kristine Gail</li>
+
+                    <li><span class="godparent-heart">♡</span> Genelou Oro</li>
+
+                    <li><span class="godparent-heart">♡</span> Guian Rheym</li>
+
+                    <li><span class="godparent-heart">♡</span> Roxan</li>
+
+                    <li><span class="godparent-heart">♡</span> Crizlyn</li>
+
+                    <li><span class="godparent-heart">♡</span> Sandra</li>
+
+                    <li><span class="godparent-heart">♡</span> Angelyn</li>
+
+                    <li><span class="godparent-heart">♡</span> Ayomi Ixchiel</li>
+
+                    <li><span class="godparent-heart">♡</span> Aizie</li>
+
+                    <li><span class="godparent-heart">♡</span> Jessa</li>
+
+                    <li><span class="godparent-heart">♡</span> Jalen</li>
+
+                    <li><span class="godparent-heart">♡</span> Ma'am Mariz</li>
+
+                    <li><span class="godparent-heart">♡</span> Ma'am She</li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="godparent-love">
+
+            <div class="divider">♡</div>
+
+            <p>Love,</p>
+
+            <h3>ALZION DALE</h3>
+
+            <div class="divider">♡</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
      GIFT GUIDE
 ========================================= -->
 
@@ -1140,11 +1419,9 @@ footer {
         <h2>Gift Guide</h2>
 
         <p class="gift-intro">
-
             Your presence is already the greatest gift!
             But if you wish to bless our little one,
             here are some things we would truly appreciate.
-
         </p>
 
         <div class="gift-list">
@@ -1188,7 +1465,7 @@ footer {
 
                 <h3>BABY CLOTHES</h3>
 
-                <p>Size: 6–12 months</p>
+                <p>Size: 1 year old</p>
 
             </div>
 
